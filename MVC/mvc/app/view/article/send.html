@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发表博文页面</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="public/editor/css/editormd.css" />
+	<script src="public/editor/js/jquery.min.js"></script>
+	<script src="public/editor/editormd.min.js"></script>
+	<script type="text/javascript">
+	    $(function() {
+	        testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                    path    : "public/editor/lib/"
+                });
+
+	    });
+	</script>
+</head>
+<body>
+	<form action="index.php?c=user&a=login" method="post">
+		<table width="800" border="1" align="center">
+			<caption><h1>发表博文页面</h1></caption>
+			<tr>
+				<td>标题</td>
+				<td><input type="text" name="title"></td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>
+					<div class="editormd" id="test-editormd">
+				    	<textarea style="display:none;" name="content">志文</textarea>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				
+				<td colspan="2"><input type="submit" name="dosubmit" value="发表"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册页面</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="index.php?c=user&a=register" method="post">
+		<table width="800" border="1" align="center">
+			<caption><h1>注册页面</h1></caption>
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>确认密码</td>
+				<td><input type="password" name="rpassword"></td>
+			</tr>
+			<tr>
+				<td>验证码</td>
+				<td>
+					<input type="text" name="yzm">
+					<img src="index.php?c=user&a=verify" onclick="this.src='index.php?c=user&a=verify&r='+Math.random();">
+				</td>
+			</tr>
+			<tr>
+				
+				<td colspan="2"><input type="submit" name="dosubmit" value="立即注册"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
